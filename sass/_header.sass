@@ -1,0 +1,91 @@
+.header
+	margin-left: 0
+	width: 100%
+	background: url(../img/banner-bgr.png) top no-repeat
+	background-size: cover
+	&-logo
+		margin-top: 80px
+		margin-left: -75px
+		&__img
+			height: 38px
+	&-action
+		width: 371px
+		// height: 65px
+		margin-top: 80px
+		display: inline-block
+		border-radius: 50px
+		box-shadow: -1px 5px 24px 1px rgba(189, 227, 239, 0.75)
+		background-color: #ffffff
+		display: flex
+		&-wrap
+			display: flex
+			justify-content: flex-end
+
+	&-search
+		width: 50%
+		display: inline-block
+		color: #151515
+		font-size: 18px
+		font-weight: 400
+		line-height: 26px
+		position: relative
+		overflow: hidden
+		flex-shrink: 0
+		padding-left: 40px
+		&:before
+			content: ""
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			height: 70%
+			width: 1px
+			background-color: #aeaeae
+		&__form
+			background: url(../img/interface/search.png) left no-repeat
+			border: none
+			padding: 24px
+			padding-left: 40px
+			// margin-left: 41px
+			font-size: 18px
+			width: 100%
+			box-sizing: border-box
+	// &-select
+	// 	width: 50px
+	// 	display: inline-block
+	// 	padding: 24px
+	// 	color: #151515
+	// 	font-size: 18px
+	// 	font-weight: 400
+	// 	line-height: 26px
+
+.banner
+	margin-bottom: 220px
+	&-text
+		justify-content: flex-end
+		transform: translateX(110px)
+		&__bl
+			margin-top: 200px
+			color: #090000
+			font-family: Roboto
+			font-size: 90px
+			font-weight: 700
+		&__wh
+			margin-bottom: 30px
+			color: #ffffff
+			font-family: Roboto
+			font-size: 90px
+			font-weight: 700
+		&__sm
+			font-family: Roboto
+			font-size: 40px
+			font-weight: 500
+			text-transform: uppercase
+			color: #fcfcfc
+			margin-bottom: 85px
+
+.highlight
+	color: #fbf934
+
+input
+	outline: none

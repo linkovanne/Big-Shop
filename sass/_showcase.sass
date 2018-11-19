@@ -1,0 +1,144 @@
+.goods
+	&-card
+		position: relative
+		&__action
+			&-like
+				display: none
+			&-comment
+				display: none
+		&__img
+			height: 260px
+			margin-bottom: 43px
+			display: flex
+			justify-content: center
+			align-items: center
+		&__name
+			display: flex
+			justify-content: center
+			margin-bottom: 13px
+			color: #777777
+			font-size: 18px
+			font-weight: 400
+			line-height: 25px
+			letter-spacing: 0.18px
+		&__price
+			display: flex
+			justify-content: center
+			margin-bottom: 62px
+			color: #333333
+			font-size: 25px
+			font-weight: 700
+			letter-spacing: 0.25px
+		&__btn
+			display: none
+			box-shadow: -1px 5px 24px 1px rgba(240, 239, 254, 0.75)
+			background-color: #fcfcfc
+			background-image: linear-gradient(26deg, #8c84f9 0%, #a165f4 100%)
+			border: none
+			border-radius: 50px
+			padding: 22px 45px
+			color: #ffffff
+			font-size: 20px
+			font-weight: 700
+		&:hover
+			box-shadow: -1px 5px 48px 3px rgba(221, 223, 224, 0.75)
+			.goods-card__price
+				color: #8c84f9
+				padding-bottom: 73px
+			.goods-card__btn
+				cursor: pointer
+				display: block
+				position: absolute
+				bottom: -7%
+				transform: translate(40%)
+			.goods-card__action
+				display: flex
+				justify-content: space-between
+				padding-top: 23px
+				padding-left: 21px
+				padding-right: 19px
+				&-like
+					cursor: pointer
+					display: inline-block
+					&-img
+						height: 21px
+						display: inline-block
+						vertical-align: middle
+						margin-right: 7px
+					&-qty
+						height: 21px
+						display: inline-block
+						vertical-align: middle
+				&-comment
+					cursor: pointer
+					display: inline-block
+					&-img
+						height: 21px
+						display: inline-block
+						vertical-align: middle
+						margin-right: 5px
+					&-qty
+						height: 21px
+						display: inline-block
+						vertical-align: middle
+
+.showcase
+	width: 85%
+	margin-right: auto
+	margin-left: auto
+	transform: translateY(76px)
+	box-shadow: -1px 5px 48px 3px rgba(237, 235, 253, 0.75)
+	background: #ffffff
+	position: relative
+	z-index: 2
+	&-menu
+		width: 100%
+		box-shadow: -1px 5px 48px 3px rgba(239, 239, 240, 0.75)
+		background-color: #ffffff
+		display: flex
+		justify-content: center
+		margin-bottom: 80px
+		padding-top: 27px
+		padding-bottom: 23px
+		&__list
+			display: inline-block
+			list-style: none
+			margin: 0
+		&__item
+			display: inline-block
+		&__link
+			display: block
+			width: 100%
+			margin-right: 48px
+			margin-left: 48px
+			justify-content: space-around
+			text-decoration: none
+			color: #333333
+			font-size: 20px
+			font-weight: 700
+			line-height: 25px
+			font-size: 15px
+			letter-spacing: 0.15px
+			letter-spacing: 0.2px
+			&:hover
+				cursor: pointer
+				text-shadow: -2px 9px 5px rgba(213, 200, 247, 0.75)
+				color: #b394fa
+	&-title
+		padding-top: 96px
+
+.bags
+	width: 85%
+	margin-right: auto
+	margin-left: auto
+	transform: translateY(-295px)
+	box-shadow: -1px 5px 48px 3px rgba(237, 235, 253, 0.75)
+	background: #ffffff
+	&-title
+		padding-top: 96px
+			
+.watches
+	&-card
+		&__img
+			height: 284px
+
