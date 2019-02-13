@@ -1,6 +1,10 @@
 .goods
 	&-card
 		position: relative
+		&to-chart
+			height: 20px
+			display: flex
+			justify-content: center
 		&__action
 			&-like
 				display: none
@@ -40,6 +44,13 @@
 			color: #ffffff
 			font-size: 20px
 			font-weight: 700
+			&:hover
+				cursor: pointer
+				background-color: #fff
+				background-image: none
+				border: 2px solid #a165f4
+				padding: 20px 43px
+				color: #a165f4
 		&:hover
 			box-shadow: -1px 5px 48px 3px rgba(221, 223, 224, 0.75)
 			.goods-card__price

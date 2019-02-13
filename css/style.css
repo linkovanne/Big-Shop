@@ -111,7 +111,8 @@ input {
   outline: none; }
 
 .goods-card {
-  position: relative; }
+  position: relative;
+  margin-bottom: 35px; }
   .goods-card__action-like {
     display: none; }
   .goods-card__action-comment {
@@ -134,7 +135,7 @@ input {
   .goods-card__price {
     display: flex;
     justify-content: center;
-    margin-bottom: 62px;
+    margin-bottom: 45px;
     color: #333333;
     font-size: 25px;
     font-weight: 700;
@@ -150,17 +151,31 @@ input {
     color: #ffffff;
     font-size: 20px;
     font-weight: 700; }
+  .goods-card__btn:hover{
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid #a165f4;
+    padding: 20px 43px;
+    color: #a165f4;}
   .goods-card:hover {
     box-shadow: -1px 5px 48px 3px rgba(221, 223, 224, 0.75); }
     .goods-card:hover .goods-card__price {
       color: #8c84f9;
-      padding-bottom: 73px; }
+      /*padding-bottom: 73px; */
+    }
+    .goods-card__to-chart{
+      height: 20px;
+      display: flex;
+      justify-content: center;
+    }
     .goods-card:hover .goods-card__btn {
       cursor: pointer;
       display: block;
       position: absolute;
-      bottom: -7%;
-      transform: translate(40%); }
+      bottom: -7%; }
+    .goods-card__action{
+      height: 45px;
+    }
     .goods-card:hover .goods-card__action {
       display: flex;
       justify-content: space-between;
@@ -247,6 +262,8 @@ input {
   .bags-title {
     padding-top: 96px; }
 
+.watches{
+  padding-bottom: 50px; }
 .watches-card__img {
   height: 284px; }
 
@@ -276,7 +293,7 @@ input {
     width: 512px;
     color: #888888;
     font-size: 16px;
-    letter-spacing: 0.2px;
+    /*letter-spacing: 0.2px;*/
     letter-spacing: 0.16px;
     line-height: 26px; }
   .brands-img {
@@ -352,7 +369,12 @@ input {
       font-size: 20px;
       font-weight: 700; }
       .feadback-form__btn:hover {
-        cursor: pointer; }
+        cursor: pointer;
+        background-color: #fff;
+        background-image: none;
+        border: 2px solid #a165f4;
+        padding: 11px 63px;
+        color: #a165f4;}
 
 .footer {
   margin: 0;
