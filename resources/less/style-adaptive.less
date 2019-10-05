@@ -1,0 +1,199 @@
+@media (max-width: 1400px) {
+	.header__logo {
+		margin-left: 0;
+	}
+	.banner__text {
+		transform: none;
+	}
+}
+@media (max-width: 1199px) {
+	/* ___________1. Сброс CSS_____________________ */
+	/* ___________2. Типовые элементы______________ */
+	/* _______________2.1. Заголовки_______________ */
+	/* _______________2.2. Ссылки__________________ */
+	/* _______________2.3. Элементы форм___________ */
+	/* _______________2.4. Сетка___________________ */
+	/* _______________2.5. Базовые_________________ */
+	/* _______________2.6. Шрифты__________________ */
+	/* _______________2.7. Другие__________________ */
+	/* ___________3. HEADER  (Шапка)_______________ */
+	/* ___________4. SECTION (Контент)_____________ */
+	/* ___________5. FOOTER  (Подвал)______________ */
+}
+
+@media (max-width: 991px) {
+	/* ___________1. Сброс CSS_____________________ */
+	/* ___________2. Типовые элементы______________ */
+	/* _______________2.1. Заголовки_______________ */
+	/* _______________2.2. Ссылки__________________ */
+	/* _______________2.3. Элементы форм___________ */
+	/* _______________2.4. Сетка___________________ */
+	/* _______________2.5. Базовые_________________ */
+	html,
+	body {
+		font-size: @baseFontSizeSm;
+	}
+	/* _______________2.6. Шрифты__________________ */
+	/* _______________2.7. Другие__________________ */
+	/* ___________3. HEADER  (Шапка)_______________ */
+	.header {
+		padding: 25px 0;
+	}
+	/* ___________4. SECTION (Контент)_____________ */
+	.section__title {
+		margin-bottom: 50px;
+	}
+
+	.banner__title {
+		font-size: 4.5rem;
+		margin-bottom: 15px;
+	}
+	.banner__subtitle {
+		font-size: 2rem;
+	}
+
+	.goods__card-wrap {
+		flex-basis: 50%;
+	}
+	.goods__img {
+		margin-bottom: 25px;
+	}
+
+	.bags__title {
+		padding-top: 50px;
+	}
+	.showcase__title {
+		padding-top: 50px;
+	}
+	.showcase__menu {
+		margin-bottom: 25px;
+	}
+	.feedback__title {
+		&::before {
+			font-size: 6.625rem;
+		}
+	}
+
+	/* ___________5. FOOTER  (Подвал)______________ */
+}
+
+@media (max-width: 767px) {
+	/* ___________1. Сброс CSS_____________________ */
+	/* ___________2. Типовые элементы______________ */
+	/* _______________2.1. Заголовки_______________ */
+	/* _______________2.2. Ссылки__________________ */
+	/* _______________2.3. Элементы форм___________ */
+	/* _______________2.4. Сетка___________________ */
+	/* _______________2.5. Базовые_________________ */
+	/* _______________2.6. Шрифты__________________ */
+	/* _______________2.7. Другие__________________ */
+	/* ___________3. HEADER  (Шапка)_______________ */
+	/* ___________4. SECTION (Контент)_____________ */
+	/* ___________5. FOOTER  (Подвал)______________ */
+}
+
+@media (max-width: 479px) {
+	/* ___________1. Сброс CSS_____________________ */
+	/* ___________2. Типовые элементы______________ */
+	/* _______________2.1. Заголовки_______________ */
+	/* _______________2.2. Ссылки__________________ */
+	/* _______________2.3. Элементы форм___________ */
+	/* _______________2.4. Сетка___________________ */
+	/* _______________2.5. Базовые_________________ */
+	/* _______________2.6. Шрифты__________________ */
+	/* _______________2.7. Другие__________________ */
+	.header__search-form,
+	.jq-selectbox.header__select__form {
+		font-size: 1rem;
+	}
+	/* ___________3. HEADER  (Шапка)_______________ */
+	.header__container {
+		flex-direction: column;
+	}
+	.header__logo {
+		margin-bottom: 10px;
+	}
+	/* ___________4. SECTION (Контент)_____________ */
+	.section__title {
+		font-size: 2.1rem;
+	}
+	.banner {
+		padding: 160px 0;
+		background: url(../img/banner-bgr.png) 30% 0 no-repeat;
+	}
+	.banner__container {
+		justify-content: flex-start;
+	}
+	.banner__title {
+		font-size: 3.5rem;
+	}
+	.banner__subtitle {
+		margin-bottom: 30px;
+	}
+
+	.goods__img {
+		height: auto;
+	}
+	.goods__card-wrap {
+		flex-basis: 100%;
+	}
+
+	.bags {
+		margin-top: -140px;
+	}
+
+	.showcase__title {
+		padding-top: 30px;
+		margin-bottom: 30px;
+	}
+	.showcase__menu-list {
+		overflow-x: auto;
+		justify-content: flex-start;
+	}
+	.showcase__menu-item {
+		padding: 15px 10px;
+	}
+
+	.brands__container {
+		flex-wrap: wrap;
+	}
+	.brands__content {
+		padding-top: 50px;
+		flex: 0 0 100%;
+	}
+	.brands__img-wrap {
+		flex: 0 0 100%;
+	}
+
+	.feedback {
+		padding: 100px 0;
+	}
+	.feedback__title{
+		padding-bottom: 50px;
+		font-size: 2rem;
+		&:before {
+			font-size: 2.85rem;
+			line-height: 20px;
+		}
+	}
+	.feedback__form {
+		width: 90%;
+		height: 65px;
+	}
+	.feedback__form__input {
+		width: 60%;
+		padding: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		font-size: .85rem;
+	}
+	.feedback__form__btn {
+		width: 40%;
+		padding: 13px;
+		font-size: .85rem;
+	}
+	/* ___________5. FOOTER  (Подвал)______________ */
+	.footer-copyright {
+		font-size: .75rem;
+	}
+}

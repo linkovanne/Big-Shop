@@ -1,0 +1,12 @@
+{
+    "/css/style.css": "/css/style.css",
+    "/js/lib/formstyler.min.js": "/js/lib/formstyler.min.js",
+    "/js/lib/inputmask.min.js": "/js/lib/inputmask.min.js",
+    "/js/lib/jquery.fancybox.min.js": "/js/lib/jquery.fancybox.min.js",
+    "/js/lib/jquery.inputmask.min.js": "/js/lib/jquery.inputmask.min.js",
+    "/js/lib/jquery.min.js": "/js/lib/jquery.min.js",
+    "/js/lib/owl.carousel.min.js": "/js/lib/owl.carousel.min.js",
+    "/js/lib/wow.min.js": "/js/lib/wow.min.js",
+    "/js/common.js": "/js/common.js",
+    "/js/site.js": "/js/site.js"
+}

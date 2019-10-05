@@ -1,0 +1,712 @@
+@import './_vars.less';
+@import './_mixins.less';
+/* ___________1. Сброс CSS_____________________ */
+@import './_reset.less';
+
+/* ___________2. Типовые элементы______________ */
+/* _______________2.1. Заголовки_______________ */
+h1,
+h2,
+h3,
+h4 {
+  font-family: @font;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+/* _______________2.2. Ссылки__________________ */
+a {
+  outline: none;
+  color: @active;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+a:hover,
+a:focus {
+  color: @active;
+  text-decoration: none;
+}
+
+/* _______________2.3. Элементы форм___________ */
+.form {
+}
+
+.form__line {
+  margin-bottom: @spacing*2;
+}
+
+.form__field {
+  padding: 0 10px;
+  width: 100%;
+  height: 42px;
+  line-height: 30px;
+  font: normal 16px @font, sans-serif;
+  color: @light;
+  background: fade(@dark, 30%);
+  border: 1px solid fade(@dark, 30%);
+  .transition();
+}
+
+textarea.form__field {
+  padding-top: @spacing;
+  padding-bottom: @spacing;
+  height: 120px;
+  resize: none;
+}
+
+.form__submit {
+  padding-top: @spacing;
+}
+
+/* _______________2.4. Сетка___________________ */
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 @spacing;
+  max-width: 1230px;
+}
+
+.container__row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-end;
+  margin: 0 -@spacing;
+}
+
+.container__col {
+  padding: 0 @spacing;
+  width: 50%;
+  min-height: 1px;
+}
+
+/* _______________2.5. Базовые_________________ */
+html,
+body {
+  height: 100%;
+  font-family: @baseFont;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @bodyColor;
+  //background: @bodyBg;
+}
+
+img {
+  max-width: 100%;
+  outline: none;
+}
+
+.none {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.button {
+  .transition();
+}
+
+.text {
+  p {
+    margin-bottom: @spacing;
+  }
+}
+
+/* _______________2.6. Шрифты__________________ */
+// @import './_fonts.less';
+
+/* _______________2.7. Другие__________________ */
+@import './lib/bootstrap-grid.less';
+// @import './lib/jquery.fancybox.min.less';
+@import './lib/formstyler.less';
+.jq-selectbox.header__select__form {
+  width: 100%;
+  position: relative;
+  display: block;
+  color: @darkInterface;
+  font-size: 1.125rem;
+  font-weight: 300;
+  border: none;
+  border-radius: 1px;
+  padding: 24px;
+  padding-right: 30px;
+  padding-left: 15px;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    top: 50%;
+    margin-top: -2px;
+    right: 20px;
+    border-top: 1px solid rgba(0, 0, 0, .5);
+    border-left: 1px solid rgba(0, 0, 0, .5);
+    transform: translateY(-50%) rotate(225deg);
+    transition: all 0.4s;
+  }
+}
+.jq-selectbox__dropdown {
+  right: 0;
+  left: 0;
+  padding: 10px 24px;
+  background: @light;
+  li {
+    padding: 5px 0;
+  }
+}
+
+/* ___________3. HEADER  (Шапка)_______________ */
+.highlight {
+  color: @yellow;
+}
+
+input {
+  outline: none;
+}
+
+.header {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  padding-top: 80px;
+  margin-left: 0;
+  width: 100%;
+}
+.header__container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  margin-left: -75px;
+}
+.header__action {
+  width: 100%;
+  max-width: 371px;
+  border-radius: 50px;
+  box-shadow: -1px 5px 24px 1px rgba(189, 227, 239, 0.75);
+  background-color: @light;
+  display: flex;
+  align-items: center;
+}
+.header__action-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.header__search {
+  width: 50%;
+  display: inline-block;
+  color: @darkInterface;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 26px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 24px;
+  padding-left: 50px;
+  &:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70%;
+    width: 1px;
+    background-color: #aeaeae;
+  }
+  img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.header__search-form {
+  border: none;
+  font-size: 1.125rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ___________4. SECTION (Контент)_____________ */
+.button{
+  display: inline-block;
+}
+.button_wh {
+  padding: 23px 51px;
+  color: @darkInterface;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 26px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: -1px 5px 24px 1px rgba(189, 227, 239, 0.75);
+  background-color: #fcfcfc;
+  &:hover {
+    cursor: pointer;
+    box-shadow: none;
+    background: linear-gradient(26deg, #8c84f9 0%, #a165f4 100%);
+    color: @light;
+  }
+}
+.button_purple {
+  //display: none;
+  padding: 22px 45px;
+  color: @light;
+  font-size: 1.125rem;
+  font-weight: 700;
+  box-shadow: -1px 5px 24px 1px rgba(240, 239, 254, 0.75);
+  background: linear-gradient(26deg, #8c84f9 0%, #a165f4 100%);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  &:hover {
+    color: @purple;
+    background: @light;
+    border: 2px solid @purple;
+  }
+}
+.button_add {
+  opacity: 0;
+}
+
+.section {}
+.section__container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.section__title {
+  display: flex;
+  margin-bottom: 117px;
+  justify-content: center;
+  color: @gray;
+  font-size: 3.125rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ___________4.2 Banner section_____________ */
+.banner {
+  min-height: 100vh;
+  padding-top: 200px;
+  padding-bottom: 240px;
+  background: url(../img/banner-bgr.png) top center no-repeat;
+  background-size: cover;
+}
+.banner__container {
+  display: flex;
+  justify-content: flex-end;
+}
+.banner__text {
+  justify-content: flex-end;
+  transform: translateX(110px);
+}
+
+.banner__title {
+  margin-bottom: 30px;
+  color: #090000;
+  font-size: 5.625rem;
+  font-weight: 700;
+  span {
+    display: block;
+    color: @light;
+  }
+}
+
+.banner__subtitle {
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  margin-bottom: 85px;
+  span {
+    color: @yellow;
+  }
+}
+
+input {
+  outline: none;
+}
+
+/* ___________4.2 showcase section_____________ */
+.goods {
+  margin: 0 -15px;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.goods__card-wrap{
+  flex-basis: 33.33%;
+  padding: 15px;
+}
+.goods__card {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.goods__like {
+  display: none;
+}
+
+.goods__comment {
+  display: none;
+}
+
+.goods__img {
+  height: 260px;
+  margin-bottom: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {}
+}
+
+.goods__name {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 13px;
+  color: @grayBody;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.18px;
+}
+
+.goods__price {
+  display: flex;
+  justify-content: center;
+  color: @gray;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+}
+
+.goods__btn {
+  display: none;
+  padding: 22px 45px;
+  color: @light;
+  font-size: 1.125rem;
+  font-weight: 700;
+  box-shadow: -1px 5px 24px 1px rgba(240, 239, 254, 0.75);
+  background: linear-gradient(26deg, #8c84f9 0%, #a165f4 100%);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  &:hover {
+    color: @purple;
+    background: @light;
+    border: 2px solid @purple;
+  }
+}
+
+.goods__card:hover {
+  box-shadow: -1px 5px 48px 3px rgba(221, 223, 224, 0.75);
+  & .goods__price {
+    color: #8c84f9;
+  }
+  & .button_add {
+    cursor: pointer;
+    opacity: 1;
+  }
+  & .goods__action {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 23px;
+    padding-left: 21px;
+    padding-right: 19px;
+  }
+  & .goods__like {
+    cursor: pointer;
+    display: inline-block;
+  }
+  & .goods__like-img {
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+  }
+  & .goods__like-qty {
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  & .goods__comment {
+    cursor: pointer;
+    display: inline-block;
+  }
+  & .goods__comment-img {
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  & .goods__comment-qty {
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.goods__to-cart {
+  position: relative;
+  bottom: -30px;
+  display: flex;
+  justify-content: center;
+}
+
+.goods__action {
+  height: 45px;
+}
+
+.showcase {
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  transform: translateY(76px);
+  box-shadow: -1px 5px 48px 3px rgba(237, 235, 253, 0.75);
+  background: @light;
+  position: relative;
+  z-index: 2;
+}
+
+.showcase__menu {
+  width: 100%;
+  box-shadow: -1px 5px 48px 3px rgba(239, 239, 240, 0.75);
+  background-color: @light;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  padding-top: 27px;
+  padding-bottom: 23px;
+}
+
+.showcase__menu-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+}
+
+.showcase__menu-item {
+  //display: inline-block;
+}
+
+.showcase__menu-link {
+  display: block;
+  width: 100%;
+  color: @gray;
+  font-weight: 700;
+  line-height: 25px;
+  //font-size: 15px;
+  letter-spacing: 0.2px;
+  &:hover {
+    cursor: pointer;
+    text-shadow: -2px 9px 5px rgba(213, 200, 247, 0.75);
+    color: #b394fa;
+  }
+}
+
+.showcase__title {
+  padding-top: 96px;
+}
+
+.bags {
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -220px;
+  box-shadow: -1px 5px 48px 3px rgba(237, 235, 253, 0.75);
+  background: @light;
+}
+
+.bags__title {
+  padding-top: 96px;
+}
+
+.watches {
+  padding-bottom: 50px;
+}
+
+.watches__img {
+  height: 284px;
+}
+
+/* ___________4.2 brands section_____________ */
+.brands {
+  //padding-top: 258px;
+  //margin-top: -290px;
+}
+.brands__container {
+  display: flex;
+  align-items: flex-start;
+}
+.brands__content {
+  padding-top: 100px;
+  flex: 0 0 50%;
+}
+.brands__title {
+  margin-bottom: 41px;
+  //margin-top: 258px;
+  justify-content: flex-start;
+  letter-spacing: 1.5px;
+}
+.brands__subtitle {
+  margin-bottom: 24px;
+  color: @gray;
+  font-size: 1.125rem;
+  letter-spacing: 3.2px;
+  line-height: 26px;
+}
+.brands__subtitle-link {
+  text-decoration: none;
+  color: #8d83f9;
+  font-size: 1.5rem;
+  letter-spacing: 0.25px;
+  line-height: 34px;
+}
+.brands__text {
+  max-width: 512px;
+  color: @grayBanner;
+  letter-spacing: 0.16px;
+  line-height: 26px;
+}
+
+.brands__img-wrap {
+  flex: 0 0 50%;
+  position: relative;
+}
+.brands__img {
+  position: relative;
+  width: 100%;
+  padding-top: 25%;
+  padding-right: 25%;
+}
+.brands__img-round {
+  position: absolute;
+  width: 100%;
+}
+
+/* ___________4.2 feedback section_____________ */
+.feedback {
+  padding-top: 175px;
+  padding-bottom: 124px;
+  background: linear-gradient(45deg, #8c84f9 0%, @purple 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.feedback__title {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding-bottom: 84px;
+  color: @light;
+  font-size: 3.125rem;
+  font-weight: 700;
+  &:before {
+    content: 'get notified';
+    position: absolute;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, 50%);
+    opacity: 0.04;
+    color: @lightBody;
+    font-size: 9.375rem;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+}
+
+.feedback__form {
+  width: 85%;
+  max-width: 847px;
+  height: 71px;
+  display: flex;
+  vertical-align: middle;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: @light;
+  border: none;
+  border-radius: 50px;
+}
+
+.feedback__form__input {
+  display: inline-block;
+  padding: 23px 65px;
+  width: 70%;
+  margin-left: 27px;
+  color: @gray;
+  font-size: 1.125rem;
+  font-weight: 400;
+  border: none;
+  border-radius: 50px;
+}
+
+.feedback__form__btn {
+  display: inline-block;
+  width: 30%;
+  margin: 6px;
+  padding: 13px 65px;
+  background: linear-gradient(28deg, #8c84f9 0%, #9c6cf5 100%);
+  border-radius: 50px;
+  border: 2px solid transparent;
+  color: @lightBody;
+  font-size: 1.125rem;
+  font-weight: 700;
+  &:hover {
+    cursor: pointer;
+    background: @light;
+    border: 2px solid @purple;
+    color: @purple;
+  }
+}
+
+/* ___________4.2 section_____________ */
+
+/* ___________5. FOOTER  (Подвал)______________ */
+.footer {
+}
+
+.footer_attached-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.footer {
+  margin: 0;
+  background-color: @lightBody;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  padding-top: 27px;
+  padding-bottom: 24px;
+  color: @grayBody;
+  font-family: Montserrat;
+  //font-size: 15px;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0.23px;
+}
+
+@import './style-adaptive.less';
